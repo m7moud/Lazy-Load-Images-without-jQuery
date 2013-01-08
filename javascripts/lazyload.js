@@ -53,7 +53,7 @@
           var mobileSrc = image.getAttribute('data-src-mobile');
 
           image.onload = function() {
-            this.className = 'lazy-loaded';
+            this.className = this.className.replace('lazy-load','lazy-loaded');
           };
 
           if (mobileSrc && screen.width <= lazyLoader.mobileScreenSize) {
